@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lora', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Title Page */
+    .title-container {
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 2em;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      font-family: 'Lora', sans-serif;
+      background: #0f0c29;
+      background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+      background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+    }
+
+    #subtitle {
+      font-weight : 300;
+      font-family: 'Lora', sans-serif;
+      margin-top: 5px;
+    }
+    
+    #linkedin-link,
+    #linkedin-link:visited {
+      font-weight: bold;
+      text-decoration: none !important;
+      color: transparent !important;
+      background: linear-gradient(
+    to right,
+    #7953cd 20%,
+    #00affa 30%,
+    #0190cd 70%,
+    #764ada 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+    /* Main Content */
+    #main-content {
+      height: 200vh;
+      background: #f4f4f4;
+      padding: 50px;
+    }
+
+    /* Index Sidebar */
+    #index {
+      position: fixed;
+      top: 100px;
+      left: -180px;
+      width: 180px;
+      color: #030303;
+      padding: 20px;
+      transition: left 0.5s ease;
+      z-index: 2;
+      border-radius: 20px;
+      background: rgba(39, 39, 39, 0.1);
+      backdrop-filter: blur(60px);
+      -webkit-backdrop-filter: blur(60px);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+    }
+
+    #index:hover {
+      left: 0;
+    }
+
+    #index a{
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    #index a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateX(5px);
+    }
