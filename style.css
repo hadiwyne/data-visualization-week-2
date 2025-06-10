@@ -35,6 +35,7 @@ body, html {
   z-index: 3;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.15);
+  cursor: default;
 }
 
 #subtitle {
@@ -51,6 +52,7 @@ body, html {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   text-shadow: 0 2px 8px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.15);
+  cursor: default;
 }
 
 #linkedin-link,
@@ -123,4 +125,66 @@ body, html {
     #index a:hover {
       background: rgba(255, 255, 255, 0.2);
       transform: translateX(5px);
+    }
+
+    .card-container {
+      position: relative;
+      min-height: 420px;
+      margin-top: 24px;
+    }
+
+#paragraph-1.intro-card.orange-card,
+#paragraph-2.intro-card.green-card {
+  position: absolute;
+  border-radius: 22px; /* Rounded borders */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18); /* Glass-like shadow */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  cursor: default;
+}
+
+#paragraph-1.intro-card.orange-card {
+  left: 260px;
+  top: 0;
+  width: 480px;
+  min-width: 260px;
+  max-width: 480px;
+  background: rgba(255, 152, 0, 0.65); /* Glassy orange */
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+#paragraph-2.intro-card.green-card {
+  left: 760px;
+  top: 140px;
+  width: 480px;
+  min-width: 260px;
+  max-width: 480px;
+  background: rgba(67, 160, 71, 0.65); /* Glassy green */
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+    
+    .intro-card {
+      flex: 1 1 320px;
+      padding: 24px 20px;
+      border-radius: 0;            
+      color: #fff;
+      font-size: 1.1em;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+      background: #fff2;
+      min-width: 260px;
+      max-width: 480px;
+    }
+    
+    .orange-card {
+      background: linear-gradient(135deg, #ff9800 80%, #ffb74d 100%);
+    }
+    
+    .green-card {
+      background: linear-gradient(135deg, #43a047 80%, #a5d6a7 100%);
+    }
+
+    #introduction{
+      text-align: center;
+      cursor: default;
     }
