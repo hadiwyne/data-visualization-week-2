@@ -1,15 +1,22 @@
-const titlePage = document.getElementById('title-page');
-    const index = document.getElementById('index');
+const titleContainer = document.querySelector('.title-container');
 
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      if (scrollY > window.innerHeight * 0.9) {
-        titlePage.style.opacity = '0';
-        titlePage.style.transform = 'translateY(-100%)';
-        index.classList.add('visible');
-      } else {
-        titlePage.style.opacity = '1';
-        titlePage.style.transform = 'translateY(0)';
-        index.classList.remove('visible');
-      }
-    });
+window.addEventListener('scroll', () => {
+  const containerRect = titleContainer.getBoundingClientRect();
+  const containerHeight = containerRect.height;
+  const containerTop = containerRect.top;
+
+  const scrollPosition = -containerTop;
+  const scrollPercentage = scrollPosition / containerHeight;
+
+  if (scrollPercentage > 0.4) {
+    titleContainer.style.opacity = '0';
+    titleContainer.style.transform = 'translateY(-20px)';
+    titleContainer.style.pointerEvents = 'none';
+    titleContainer.style.transition = 'opacity 0.3s ease, transform 0.3s ease'; 
+  } else {
+    titleContainer.style.opacity = '1';
+    titleContainer.style.transform = 'translateY(0)';
+    titleContainer.style.pointerEvents = 'auto';
+    titleContainer.style.transition = 'opacity 0.3s ease, transform 0.3s ease'; 
+  }
+});

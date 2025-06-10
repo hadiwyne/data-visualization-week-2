@@ -5,6 +5,12 @@ body, html {
       font-family: 'Lora', sans-serif;
       scroll-behavior: smooth;
     }
+.background-visual {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
     /* Title Page */
     .title-container {
@@ -16,13 +22,18 @@ body, html {
       justify-content: center;
       text-align: center;
       font-size: 2em;
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      transition: opacity 0.3s ease, transform 0.3s ease;
       position: relative;
       z-index: 1;
       font-family: 'Lora', sans-serif;
       background: #0f0c29;
+      z-index: 2;
+      will-change: opacity, transform;
     }
 #title-page{
+  position: relative;
+  z-index: 3;
+  color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.15);
 }
 
