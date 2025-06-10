@@ -19,25 +19,35 @@ body, html {
       transition: opacity 0.5s ease, transform 0.5s ease;
       position: relative;
       z-index: 1;
-      background: #fff;
       font-family: 'Lora', sans-serif;
       background: #0f0c29;
-      background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
-      background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
     }
+#title-page{
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.15);
+}
 
-    #subtitle {
-      font-weight : 300;
-      font-family: 'Lora', sans-serif;
-      margin-top: 5px;
-    }
-    
-    #linkedin-link,
-    #linkedin-link:visited {
-      font-weight: bold;
-      text-decoration: none !important;
-      color: transparent !important;
-      background: linear-gradient(
+#subtitle {
+  font-weight: 300;
+  font-family: 'Lora', sans-serif;
+  margin-top: 5px;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 18px;
+  padding: 16px 28px;
+  background: rgba(30, 30, 60, 0.35);
+  display: inline-block;
+  color: #fff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.15);
+}
+
+#linkedin-link,
+#linkedin-link:visited {
+  font-weight: bold;
+  text-decoration: none !important;
+  color: transparent !important;
+  background: linear-gradient(
     to right,
     #7953cd 20%,
     #00affa 30%,
@@ -47,6 +57,7 @@ body, html {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.15);
   background-size: 500% auto;
   animation: textShine 5s ease-in-out infinite alternate;
 }
@@ -63,7 +74,6 @@ body, html {
     /* Main Content */
     #main-content {
       height: 200vh;
-      background: #f4f4f4;
       padding: 50px;
     }
 
