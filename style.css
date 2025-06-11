@@ -131,6 +131,7 @@ body, html {
       position: relative;
       min-height: 420px;
       margin-top: 24px;
+      margin-left: 260px;
     }
 
 #paragraph-1.intro-card.orange-card,
@@ -145,7 +146,7 @@ body, html {
 }
 
 #paragraph-1.intro-card.orange-card {
-  left: 260px;
+  left: 0;
   top: 0;
   width: 480px;
   min-width: 260px;
@@ -155,7 +156,7 @@ body, html {
 }
 
 #paragraph-2.intro-card.green-card {
-  left: 760px;
+  left: 500px;
   top: 140px;
   width: 480px;
   min-width: 260px;
@@ -176,15 +177,112 @@ body, html {
       max-width: 480px;
     }
     
-    .orange-card {
+     .orange-card {
       background: linear-gradient(135deg, #ff9800 80%, #ffb74d 100%);
+      position: relative;
+      overflow: hidden;   
+      z-index: 1;
     }
     
+    .orange-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        0deg, 
+        transparent, 
+        transparent 30%, 
+        rgba(0,255,255,0.3)
+      );
+      transform: rotate(-45deg);
+      transition: all 0.5s ease;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+    
+    .orange-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,255,255,0.5);
+    }
+    
+    .orange-card:hover::before {
+      opacity: 1;
+      transform: rotate(-45deg) translateY(100%);
+    }
     .green-card {
       background: linear-gradient(135deg, #43a047 80%, #a5d6a7 100%);
+     position: relative;
+      overflow: hidden;   
+      z-index: 1;
+    }
+    
+    .green-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        0deg, 
+        transparent, 
+        transparent 30%, 
+        rgba(0,255,255,0.3)
+      );
+      transform: rotate(-45deg);
+      transition: all 0.5s ease;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+    
+    .green-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,255,255,0.5);
+    }
+    
+    .green-card:hover::before {
+      opacity: 1;
+      transform: rotate(-45deg) translateY(100%);
     }
 
-    #introduction{
-      text-align: center;
+      #introduction {
+      text-align: left;
       cursor: default;
+      position: relative;
+      display: inline-block;
+      margin: 40px 0 0 260px;
+      left: 0;
+      transform: none;
+    }
+    
+    #introduction::after,
+    #introduction::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, #ff0000, #00ffff);
+      transform: scaleX(0);
+      transition: transform 0.4s ease-out;
+    }
+    
+    #introduction::before {
+      top: -5px;
+      transform-origin: left;
+    }
+    
+    #introduction::after {
+      bottom: -5px;
+      transform-origin: right;
+    }
+    
+    #introduction:hover::after,
+    #introduction:hover::before {
+      transform: scaleX(1);
     }
