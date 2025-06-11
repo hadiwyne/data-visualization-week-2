@@ -127,130 +127,46 @@ body, html {
       transform: translateX(5px);
     }
 
-    .card-container {
-      position: relative;
-      min-height: 420px;
-      margin-top: 24px;
-      margin-left: 260px;
-    }
+        .card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;  
+    align-items: flex-start;
+    margin: 24px auto; 
+    min-height: 0;
+    position: relative;
+}
 
 #paragraph-1.intro-card.orange-card,
 #paragraph-2.intro-card.green-card {
-  position: absolute;
-  border-radius: 22px; /* Rounded borders */
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18); /* Glass-like shadow */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: #fff;
-  cursor: default;
+    position: static;      
+    width: 480px;
+    min-width: 260px;
+    max-width: 480px;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    cursor: default;
+    margin: 0;
+    font-size: 1.32em;
 }
 
-#paragraph-1.intro-card.orange-card {
-  left: 0;
-  top: 0;
-  width: 480px;
-  min-width: 260px;
-  max-width: 480px;
-  background: rgba(255, 152, 0, 0.65); /* Glassy orange */
-  border: 2px solid rgba(255, 255, 255, 0.18);
+.intro-card {
+    flex: 1 1 320px;
+    padding: 24px 20px;
+    border-radius: 22px;
+    color: #222;  
+    font-size: 1.32em;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+    background: rgba(255, 255, 255, 0.75);  
+    min-width: 260px;
+    max-width: 480px;
 }
 
-#paragraph-2.intro-card.green-card {
-  left: 500px;
-  top: 140px;
-  width: 480px;
-  min-width: 260px;
-  max-width: 480px;
-  background: rgba(67, 160, 71, 0.65); /* Glassy green */
-  border: 2px solid rgba(255, 255, 255, 0.18);
-}
-    
-    .intro-card {
-      flex: 1 1 320px;
-      padding: 24px 20px;
-      border-radius: 0;            
-      color: #fff;
-      font-size: 1.1em;
-      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
-      background: #fff2;
-      min-width: 260px;
-      max-width: 480px;
-    }
-    
-     .orange-card {
-      background: linear-gradient(135deg, #ff9800 80%, #ffb74d 100%);
-      position: relative;
-      overflow: hidden;   
-      z-index: 1;
-    }
-    
-    .orange-card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        0deg, 
-        transparent, 
-        transparent 30%, 
-        rgba(0,255,255,0.3)
-      );
-      transform: rotate(-45deg);
-      transition: all 0.5s ease;
-      opacity: 0;
-      pointer-events: none;
-      z-index: 2;
-    }
-    
-    .orange-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(0,255,255,0.5);
-    }
-    
-    .orange-card:hover::before {
-      opacity: 1;
-      transform: rotate(-45deg) translateY(100%);
-    }
-    .green-card {
-      background: linear-gradient(135deg, #43a047 80%, #a5d6a7 100%);
-     position: relative;
-      overflow: hidden;   
-      z-index: 1;
-    }
-    
-    .green-card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        0deg, 
-        transparent, 
-        transparent 30%, 
-        rgba(0,255,255,0.3)
-      );
-      transform: rotate(-45deg);
-      transition: all 0.5s ease;
-      opacity: 0;
-      pointer-events: none;
-      z-index: 2;
-    }
-    
-    .green-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(0,255,255,0.5);
-    }
-    
-    .green-card:hover::before {
-      opacity: 1;
-      transform: rotate(-45deg) translateY(100%);
-    }
-
-      #introduction {
+      #introduction,
+      #high-cpc {
       text-align: left;
       cursor: default;
       position: relative;
@@ -258,6 +174,12 @@ body, html {
       margin: 40px 0 0 260px;
       left: 0;
       transform: none;
+    }
+
+    #supporting-evidence{
+      text-align: left;
+      cursor: default;
+      margin: 40px 0 0 260px;
     }
     
     #introduction::after,
@@ -286,3 +208,56 @@ body, html {
     #introduction:hover::before {
       transform: scaleX(1);
     }
+
+.charts-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.chart-item {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-item-2 {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar-chart, .bar-chart-2 {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  border-radius: 16px;
+}
+
+.bar-chart-3, .bar-chart-4 {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  border-radius: 16px;
+}
+
+
+.caption {
+  margin-top: 16px;
+  background: rgba(30, 30, 60, 0.35); 
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  max-width: 90%;
+  text-align: justify;
+  font-size: 1.35em;
+}

@@ -2,6 +2,7 @@
 <html lang="en">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="background.css">
+<link rel="stylesheet" href="triangle-background.css">
 
 <head>
   <meta charset="UTF-8" />
@@ -18,11 +19,12 @@
 
   <div id="index">
       <a href="#introduction">Introduction</a>
-      <a href="#features">Features</a>
+      <a href="#supporting-evidence">Supporting Evidence</a>
       <a href="Conclusion">Conclusion</a>
   </div>
 
     <div id="main-content">
+    <div class="wrap" id="triangles"></div>
     <div id="introduction-part">
       <h1 id="introduction">Introduction</h1>
       <div class="card-container">
@@ -34,7 +36,50 @@
         </div>
       </div>
     </div>
+<div id="supp-evidence-part">
+  <h1 id="supporting-evidence">Supporting Evidence</h1>
+  <h2 id="high-cpc">- Highest Cost Per Click (CPC)</h2>
+
+  <div class="charts-container">
+
+    <div class="chart-item">
+      <img src="images/w2_cost_per_click_fig1.png" alt="CPC Visualization" class="bar-chart">
+      <p class="caption">
+        The deeper shaded bar shows which campaign has the highest CPC out of all. The Australian campaign's CPC is approximately <strong>608% higher</strong> than the average campaign CPC, demonstrating severe cost inefficiency.
+      </p>
+    </div>
+
+    <div class="chart-item">
+      <img src="images/w2_avg_cpc_aus_fig2.png" alt="CPC Visualization" class="bar-chart-2">
+      <p class="caption">
+        This graph compares the average CPC with the Australian campaign’s CPC. The difference is clearly visible in this graph.
+      </p>
+    </div>
+    <div class="chart-item-2">
+      <img src="images/w2_cpc_aus_nig_fig3.png" alt="CPC Visualization" class="bar-chart-3">
+      <p class="caption">
+        When benchmarked against our most cost-efficient campaign (Nigeria) which had an average CPC of <strong>$0.34</strong>, the contrast becomes even more dramatic. The Australian campaign requires <strong>$7.58</strong> more per click than the Nigerian campaign ($7.92 vs. $0.34), making it 23 times more expensive to achieve the same basic engagement metric. 
+We can also do a campaign efficiency score to see which is the second worst performing campaign, which we had earlier explained to be the UK campaign. This Efficiency scored was achieved via the following formula: 
+<br><br><strong>Efficiency Score = Unique Link Clicks (ULC) / Amount Spent</strong>
+      </p>
+    </div>
+    <div class="chart-item-2">
+      <img src="images/w2_eff_score_fig4.png" alt="CPC Visualization" class="bar-chart-4">
+      <p class="caption">
+        We can visually confirm that the Australian campaign has one of the lowest efficiency scores.
+      </p>
+    </div>
+  </div>
+</div>
   </div>
   <script src="script.js"></script>
+    <script>
+    const container = document.getElementById("triangles");
+    for (let i = 0; i < 200; i++) {
+      const div = document.createElement("div");
+      div.className = "tri";
+      container.appendChild(div);
+    }
+  </script>
   </body>
 </html>
