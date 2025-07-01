@@ -127,6 +127,34 @@ body, html {
       transform: translateX(5px);
     }
 
+    .index-section .subsections {
+      display: none;
+      margin-left: 18px;
+    }
+    
+    .index-section:hover .subsections,
+    .index-section:focus-within .subsections {
+      display: block;
+    }
+    
+    .index-section .subsections a {
+      font-size: 0.95em;
+      color: #fff;
+      opacity: 0.85;
+      padding-left: 12px;
+    }
+
+    #high-cpc,
+    #supoptim-engagement {
+      display: none;
+      
+    }
+    
+    #supporting-evidence:hover + #high-cpc,
+    #supporting-evidence:hover + #high-cpc + .charts-container + #supoptim-engagement {
+      display: block;
+    }
+
         .card-container {
     display: flex;
     flex-direction: row;
@@ -261,9 +289,24 @@ body, html {
   z-index: 1;
 }
 
-.bar-chart-7,
-.bar-chart-8{
+.bar-chart-7, .bar-chart-8, .bar-chart-9 {
   width: 100%;
+  height: auto;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.bar-chart-10{
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.pie-chart{
+    width: 100%;
   height: auto;
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
   border-radius: 16px;
@@ -283,4 +326,13 @@ body, html {
   text-align: justify;
   font-size: 1.35em;
   cursor: default;
+}
+
+#budget-impact{
+  text-align: left;
+      cursor: default;
+      position: relative;
+      display: inline-block;
+      margin: 40px 0 0 260px;
+      left: 0;
 }

@@ -58,10 +58,16 @@
     <p id="subtitle">Arranged by <a href="https://www.linkedin.com/in/khabdulhadis/" id="linkedin-link">Abdul Hadi</a></p>
   </div>
 
-  <div id="index">
-      <a href="#introduction">Introduction</a>
-      <a href="#supporting-evidence">Supporting Evidence</a>
-      <a href="#supoptim-engagement">Suboptimal Engagement Metrics</a>
+   <div id="index">
+    <a href="#introduction">Introduction</a>
+    <div class="index-section">
+      <a href="#supporting-evidence" class="main-section">Supporting Evidence</a>
+      <div class="subsections">
+        <a href="#high-cpc">- Highest Cost Per Click (CPC)</a>
+        <a href="#supoptim-engagement">- Suboptimal Engagement Metrics</a>
+        <a href="#budget-impact">- Budget Impact</a>
+      </div>
+    </div>
   </div>
 
     <div id="main-content">
@@ -69,7 +75,7 @@
       <h1 id="introduction">Introduction</h1>
       <div class="card-container">
         <div id="paragraph-1" class="intro-card orange-card">
-          In our previous report, we established criteria to evaluate GlobalShala's social media marketing campaigns. Our analysis identified <b>SHU_Students (Australia)</b> as the least effective campaign, with <b>SHU_Students (UK)</b> as the second worst performer. While both underperform, we suggested optimizing the UK campaign due to its slightly better click-through rate (CTR).
+          In our <a href="https://datavisweek1.netlify.app/" id="previous-report">previous report</a>, we established criteria to evaluate GlobalShala's social media marketing campaigns. Our analysis identified <b>SHU_Students (Australia)</b> as the least effective campaign, with <b>SHU_Students (UK)</b> as the second worst performer. While both underperform, we suggested optimizing the UK campaign due to its slightly better click-through rate (CTR).
         </div>
         <div id="paragraph-2" class="intro-card green-card">
           This week, we will support our recommendation by exploring the dataset and making visualizations to visually depict how the data validates our criteria. We will go through each of the supporting evidence listed in the previous report, and represent it visually. Multiple programs such as Power Bi, Tableau, and R will be used to create these visualizations.
@@ -124,13 +130,41 @@ We can also do a campaign efficiency score to see which is the second worst perf
     When compared to similar markets (UK and USA), the Australian campaign consistently underperforms. We can clearly see here that the Australian campaign has largely been a financial burden on the client. 
   </p>
 </div>
-<div class="chart-item-3">
+<div class="chart-item-2">
   <img src="images/w2_reach_ulc_fig6.png" alt="reach vs campaign" class="bar-chart-7">
   <p class="caption">
     The campaign's reach <b>(14,492 users)</b> also doesn't translate to meaningful engagement. These graphs show the ULC of all other campaigns compared to the Australian campaign, which is one of the lowest.
   </p>
 </div>
+<div class="chart-item-2">
+  <img src="/images/w2_reach_ulc_campaign_fig7.png" alt="reach vs campaign" class="bar-chart-8">
+  <p class="caption">
+    These graphs show the ULC of all other campaigns compared to the Australian campaign, which is one of the lowest.
+  </p>
+</div>
+<div class="chart-item-2">
+  <img src="/images/campaign_performace_us_uk_aus_fig8.png" alt="aus vs usa vs uk" class="bar-chart-9">
+  <p class="caption">
+    When compared to similar markets (UK and USA), the Australian campaign consistently underperforms. We can clearly see here that the Australian campaign has largely been a financial burden on the client. 
+  </p>
+</div>
   </div>
+  <h2 id="budget-impact">- Budget Impact</h2>
+  <div class="charts-container">
+    <div class="chart-item">
+      <img src="images/w2_budget_share_fig9.png" alt="marketing budget pie chart" class="pie-chart">
+      <p class="caption">
+        The major angle that we judged the Australian campaign was the budget angle. Despite eating up a significant portion of the marketing revenue, it had a low conversion rate, but the highest cost per click. <br> <br> This campaign is clearly consuming a lot of budget, and dropping this campaign will eliminate the highest CPC consuming campaign in the portfolio. 
+      </p>
+    </div>
+    <div class="chart-item-2">
+      <img src="images/cpc_current_proposed_fig10.png" alt="current vs proposed portfolio" class="bar-chart-10">
+      <p class="caption">
+        We can see that the UK campaign, which can be optimized for better results, becomes the next highest CPC campaign in the portfolio. <br> <br> <b>Resource Reallocation: This strategic decision will free up exactly $850.68 for redistribution</b>
+      </p>
+    </div>
+  </div>
+
   <script src="script.js"></script>
   </body>
 </html>
